@@ -79,7 +79,7 @@ class NamedPipeClient
                 string response = encoder.GetString(buffer, 0, bytesRead);
                 double latenciaCalculada = receivedMsOfDay - sentMsOfDay;
 
-                Console.WriteLine($"[CLIENT] Recibido: {response} | ID: {mensajeId} | Hora: {horaRecibido} | ms del día: {receivedMsOfDay:F3} ms");
+                Console.WriteLine($"[CLIENT] Recibido: {response} | ID: {mensajeId} | Hora: {horaRecibido} | ms: {receivedMsOfDay:F3} ms");
                 Console.WriteLine($"[CLIENT] Latencia ida/vuelta (calculada): {latenciaCalculada:F5} ms");
                 Console.WriteLine("---");
 

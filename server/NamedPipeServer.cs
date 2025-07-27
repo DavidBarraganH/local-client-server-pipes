@@ -40,7 +40,7 @@ class NamedPipeServer
                 var recibidoAhora = DateTime.Now;
                 double recibidoMs = recibidoAhora.TimeOfDay.TotalMilliseconds;
 
-                Console.WriteLine($"[SERVER] Recibido: {contenido} | ID: {id} | Hora: {recibidoAhora:HH:mm:ss.fffff} | ms del día: {recibidoMs:F3} ms");
+                Console.WriteLine($"[SERVER] Recibido: {contenido} | ID: {id} | Hora: {recibidoAhora:HH:mm:ss.fffff} | ms: {recibidoMs:F3} ms");
 
                 string respuesta = respuestaServidor;
                 byte[] responseData = encoder.GetBytes(respuesta);
@@ -57,7 +57,7 @@ class NamedPipeServer
                 var enviadoAhora = DateTime.Now;
                 double enviadoMs = enviadoAhora.TimeOfDay.TotalMilliseconds;
 
-                Console.WriteLine($"[SERVER] Enviado: {respuestaServidor} | ID: {id} | Hora: {enviadoAhora:HH:mm:ss.fffff} | ms del día: {enviadoMs:F3} ms");
+                Console.WriteLine($"[SERVER] Enviado: {respuestaServidor} | ID: {id} | Hora: {enviadoAhora:HH:mm:ss.fffff} | ms: {enviadoMs:F3} ms");
                 Console.WriteLine("---");
             }
         }
